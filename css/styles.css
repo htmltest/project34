@@ -12,7 +12,7 @@ img {border:none}
 .container {width:100%}
 .container:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 
-.side {float:left; position:relative; z-index:2; width:300px}
+.side {float:left; position:relative; z-index:4; width:300px}
 .side-top {height:220px; background:url(../images/side-top.png)}
 
 .logo {line-height:0; padding:35px 0 0 39px}
@@ -52,9 +52,13 @@ img {border:none}
 .side-ctrl-contacts {float:left; width:66px; margin:0 5px 0 0}
 .side-ctrl-contacts-icon {height:58px; background:url(../images/side-ctrl-contacts.png) no-repeat center}
 .side-ctrl-contacts-title {height:26px; border-top:3px solid #415968; background:#fff}
-.side-ctrl-search {float:left; width:66px; margin:0 5px 0 0}
+.side-ctrl-search {float:left; width:66px; margin:0 5px 0 0; position:relative; background:#d5dce0; color:#415968; border:3px solid #415968; cursor:pointer}
+.side-ctrl-search:hover {background:none}
 .side-ctrl-search-icon {height:58px; background:url(../images/side-ctrl-search.png) no-repeat center}
 .side-ctrl-search-title {height:26px; border-top:3px solid #415968; background:#fff}
+.side-ctrl-search form {position:absolute; left:-3px; bottom:-3px; overflow:hidden; width:0px; height:32px}
+.side-ctrl-search-input input {vertical-align:top; border:3px solid #415968; background:#d5dce0; height:26px; color:#415968; font:15px/26px "Open Sans", sans-serif; margin:0; padding:0 16px; width:190px; outline:none; -webkit-appearance:none}
+.side-ctrl-search-input input::-ms-clear {display:none}
 .side-ctrl-lang {float:left; width:69px; font-size:11px}
 .side-ctrl-lang a {float:right; width:26px; height:26px; border:3px solid #415968}
 .side-ctrl-lang a:first-child {float:left}
@@ -74,9 +78,12 @@ img {border:none}
 .content {float:right; width:624px}
 
 .main-top {position:relative; height:362px}
-.main-top-bg {position:absolute; right:0; top:0}
-.main-top-lines {position:absolute; right:0; top:0; width:100%; height:100%; background:url(../images/main-top-lines.png)}
-.main-top-content {position:absolute; right:7px; top:7px; width:68px; font:9px/26px "Open Sans", sans-serif; text-align:center; text-transform:uppercase}
+.slider {position:absolute; right:0; top:0; width:940px; height:362px}
+.slider ul {position:relative; margin:0; padding:0; list-style:none}
+.slider ul li {position:absolute; left:0; top:0; margin:0; padding:0; display:none}
+.slider ul li:first-child {display:block}
+.main-top-lines {position:absolute; right:0; top:0; width:100%; height:100%; background:url(../images/main-top-lines.png); z-index:3}
+.main-top-content {position:absolute; right:7px; top:7px; width:68px; font:9px/26px "Open Sans", sans-serif; text-align:center; text-transform:uppercase; z-index:3}
 .main-top-content a {display:block; text-decoration:none; color:#fff; background:#fff; background:rgba(255, 255, 255, .2)}
 .main-top-content a:hover {background:none}
 .main-top-lang {width:100%}
@@ -490,3 +497,16 @@ footer div.footer-phone {font:300 15px/18px "Open Sans", sans-serif}
 .presentation-pages-last {float:right}
 
 .window-video {margin:0 0 24px 0}
+
+.pager {line-height:21px; margin:21px 0 0 0}
+.pager a {color:#415968; vertical-align:top; display:inline-block; margin:0 8px}
+.pager a:hover {color:#de0738}
+.pager a.active {font-size:21px; font-weight:bold; text-decoration:none; margin-top:2px}
+.pager-sep {display:inline-block; vertical-align:top; margin:9px 8px 0 8px; background:url(../images/sprite.png) left -15px; width:14px; height:4px}
+.pager a.pager-next {text-decoration:none}
+.pager a.pager-next:after {content:""; display:inline-block; vertical-align:top; width:12px; height:15px; background:url(../images/sprite.png) -12px top; margin:3px 0 0 19px}
+.pager a.pager-prev {text-decoration:none}
+.pager a.pager-prev:before {content:""; display:inline-block; vertical-align:top; width:12px; height:15px; background:url(../images/sprite.png) left top; margin:3px 19px 0 0}
+.pager a.disabled {cursor:default; opacity:.4; filter:alpha(opacity=40)}
+.pager a.disabled:hover,
+.pager a.active:hover {color:#415968}
