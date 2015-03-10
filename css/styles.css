@@ -407,15 +407,14 @@ nav ul li a:hover {color:#de0738}
 .photos-item-name {text-align:center; height:36px; font:300 15px/36px "Open Sans", sans-serif; letter-spacing:0; color:#fff; background:#415968; margin:10px 0 0 0}
 .photos-item-anonce {font:300 13px/15px "Open Sans", sans-serif; letter-spacing:0; color:#fff; background:#e11f4c; padding:21px 13px 25px 13px; text-align:left; margin:10px 0 0 0}
 
-.partners {position:relative; height:80px; overflow:hidden; margin-top:36px; border-top:1px solid #a0acb4; border-bottom:1px solid #a0acb4}
-.partners ul {margin:0; padding:0; list-style:none; text-align:justify}
-.partners ul:after {content:""; display:inline-block; width:100%; height:1px}
-.partners ul li {display:inline-block; height:80px; line-height:80px; vertical-align:middle; margin:0; padding:0; position:relative}
-.partners ul li span {display:inline-block; line-height:0; vertical-align:middle; position:relative; overflow:hidden}
-.partners ul li img {display:block; position:absolute; left:-999px; top:-999px}
-.partners ul li img:first-child {position:relative; left:auto; top:auto}
-.partners ul li:hover img {position:relative; left:auto; top:auto}
-.partners ul li:hover img:first-child {position:absolute; left:-999px; top:-999px}
+.partners {width:100%; position:relative; overflow:hidden; height:89px; margin-top:20px}
+.partners ul {position:relative; width:9999px; margin:0; padding:0; list-style:none; height:89px; background:url(../images/blank.gif)}
+.partners ul:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.partners ul li {float:left; width:124px; margin:0; padding:0}
+.partners ul li span {display:block; width:89px; height:89px; position:relative; opacity:.5; filter:alpha(opacity=50)}
+.partners ul li span:hover {opacity:1; filter:alpha(opacity=100)}
+.partners ul li span img {display:block; position:relative; filter:url(../js/filters.svg#grayscale); filter:gray; -webkit-filter:grayscale(1)}
+.partners ul li span:hover img {filter:none; -webkit-filter:grayscale(0)}
 
 .bottom {text-align:justify; padding:36px 0 16px 0}
 .bottom:after {content:""; display:inline-block; width:100%; height:1px}

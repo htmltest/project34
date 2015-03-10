@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 	// Grayscale images on Safari and Opera browsers
 	if(getBrowser()=='opera' || getBrowser()=='safari'){
-		var $images = $(".photos-item-preview img")
+		var $images = $(".photos-item-preview img, .partners ul li span img")
 		, imageCount = $images.length
 		, counter = 0;
 
@@ -13,8 +13,8 @@ $(document).ready(function() {
 			counter++;
 			if (counter == imageCount) {
 				// do stuff when all have loaded
-				grayscale($('.photos-item-preview img'));
-				$(".photos-item").hover(
+				grayscale($('.photos-item-preview img, .partners ul li span img'));
+				$(".photos-item, .partners ul li span").hover(
 					function () {
 						grayscale.reset($(this).find('img'));
 					},
@@ -35,7 +35,7 @@ $(document).ready(function() {
 
 	// Grayscale images only on browsers IE10+ since they removed support for CSS grayscale filter
 	if (getInternetExplorerVersion() >= 10){
-		$('.photos-item-preview img').each(function(){
+		$('.photos-item-preview img, .partners ul li span img').each(function(){
 			var el = $(this);
 			el.css({"position":"absolute"}).wrap("<div class='img_wrapper' style='display: inline-block'>").clone().addClass('img_grayscale').css({"position":"absolute","z-index":"5","opacity":"0"}).insertBefore(el).queue(function(){
 				var el = $(this);
@@ -46,7 +46,7 @@ $(document).ready(function() {
 		});
 
 		// Quick animation on IE10+
-		$('.photos-item').hover(
+		$('.photos-item, .partners ul li span').hover(
 			function () {
 				$(this).find('img:first').stop().animate({opacity:1}, 200);
 			},
