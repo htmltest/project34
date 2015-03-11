@@ -338,7 +338,11 @@ var timerSliderMain     = null;
                     curSlider.data('disableAnimation', true);
 
                     var curPages = curSlider.find('li').length;
-                    curSlider.find('.presentation-pages-last').html(curPages);
+                    var curPagesText = curPages;
+                    if (curPages < 10) {
+                        curPagesText = '0' + curPages;
+                    }
+                    curSlider.find('.presentation-pages-last').html(curPagesText);
                     curSlider.find('.presentation-progress div').width(curSlider.find('.presentation-progress').width() / curPages);
                 });
             });
@@ -478,6 +482,105 @@ var timerSliderMain     = null;
                 var curIndex = curSlider.data('curIndex');
 
                 curIndex = 0;
+
+                curSlider.data('curIndex', curIndex);
+
+                curSlider.find('.presentation-progress div').css({'left': curIndex * curSlider.find('.presentation-progress div').width()});
+
+                curSlider.data('disableAnimation', false);
+                curSlider.find('li:visible').fadeOut(sliderSpeed, function() {
+                    curSlider.find('li').eq(curIndex).fadeIn(sliderSpeed, function() {
+                        curSlider.data('disableAnimation', true);
+                    });
+                });
+            }
+            e.preventDefault();
+        });
+
+        $('.photos-in a').click(function(e) {
+            var curIndex = $('.photos-in a').index($(this));
+
+            var html =  '<div class="photo-window-title">Фотоматериалы</div>' +
+                        '<div class="text">' +
+                            '<h1>' + $('.photos-in-item-name').html() + '</h1>' +
+                            '<div class="presentation">' +
+                                '<div class="presentation-content">' +
+                                    '<ul>';
+
+            $('.photos-in a').each(function() {
+                html +=             '<li><img src="' + $(this).attr('href') + '" alt="" /></li>';
+            });
+
+            html +=                 '</ul>' +
+                                    '<a href="#" class="photo-window-prev"></a>' +
+                                    '<a href="#" class="photo-window-next"></a>' +
+                                '</div>' +
+                                '<div class="presentation-progress presentation-progress-2"><div></div></div>' +
+                                '<div class="presentation-pages">' +
+                                    '<div class="presentation-pages-first">01</div>' +
+                                    '<div class="presentation-pages-last"></div>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="present-text">' + $('.photos-in-item-anonce').html() + '</div>' +
+                        '</div>';
+
+            windowOpen(html);
+
+            $('.window .presentation').each(function() {
+                var curSlider = $(this);
+                curSlider.data('curIndex', curIndex);
+                curSlider.data('disableAnimation', true);
+
+                var curPages = curSlider.find('li').length;
+                var curPagesText = curPages;
+                if (curPages < 10) {
+                    curPagesText = '0' + curPages;
+                }
+                curSlider.find('.presentation-pages-last').html(curPagesText);
+                curSlider.find('.presentation-progress div').width(curSlider.find('.presentation-progress').width() / curPages);
+                curSlider.find('.presentation-progress div').css({'left': curIndex * curSlider.find('.presentation-progress div').width()});
+                curSlider.find('li').hide();
+                curSlider.find('li').eq(curIndex).show();
+            });
+
+            e.preventDefault();
+        });
+
+        $('body').on('click', '.window .photo-window-next', function(e) {
+            var curSlider = $('.window .presentation');
+
+            if (curSlider.data('disableAnimation')) {
+                var curIndex = curSlider.data('curIndex');
+
+                curIndex++;
+                if (curIndex > curSlider.find('li').length - 1) {
+                    curIndex = curSlider.find('li').length - 1;
+                }
+
+                curSlider.data('curIndex', curIndex);
+
+                curSlider.find('.presentation-progress div').css({'left': curIndex * curSlider.find('.presentation-progress div').width()});
+
+                curSlider.data('disableAnimation', false);
+                curSlider.find('li:visible').fadeOut(sliderSpeed, function() {
+                    curSlider.find('li').eq(curIndex).fadeIn(sliderSpeed, function() {
+                        curSlider.data('disableAnimation', true);
+                    });
+                });
+            }
+            e.preventDefault();
+        });
+
+        $('body').on('click', '.window .photo-window-prev', function(e) {
+            var curSlider = $('.window .presentation');
+
+            if (curSlider.data('disableAnimation')) {
+                var curIndex = curSlider.data('curIndex');
+
+                curIndex--;
+                if (curIndex < 0) {
+                    curIndex = 0;
+                }
 
                 curSlider.data('curIndex', curIndex);
 
