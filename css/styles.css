@@ -207,6 +207,8 @@ nav ul li a:hover {color:#de0738}
 .form-submit input {vertical-align:top; width:283px; height:34px; border:1px solid #fff; border-right-color:#111f2a; border-bottom-color:#111f2a; background:#415968 url(../images/submit.png) no-repeat center top; margin:0; padding:0; outline:2px solid #b3bdc3; color:#fff; font:14px/34px "Open Sans", sans-serif; cursor:pointer; -webkit-appearance:none}
 .form-submit input:hover {background-position:center -34px}
 .form-submit-2 input {width:196px}
+.form-submit-3 {float:right}
+.form-submit-3 input {width:196px}
 .form-captcha-2 .form-submit input {width:196px}
 .form-multicheck {position:relative; margin:0 0 19px 0; border-top:1px solid #415968; border-left:1px solid #415968; background:#eceef0; height:35px; font:300 17px/34px "Open Sans", sans-serif}
 .form-multicheck+.form-label {margin-top:-12px}
@@ -347,6 +349,7 @@ nav ul li a:hover {color:#de0738}
 .text-structure-item {display:table-cell; width:25%; padding:8px 15px; border-left:20px solid #fff; border-top:20px solid #fff; vertical-align:middle; background:#415968; text-align:center; color:#fff}
 .text-structure-item:first-child {border-left:0}
 .text-structure-name {display:table-cell; padding:0 0 0 63px; width:145px; vertical-align:middle; text-transform:uppercase; color:#fff; background:#415968; border-top:20px solid #fff}
+.text-structure+.text-structure .text-structure-item  {height:57px; width:auto; border-top:0}
 .text-structure-sep {display:table-cell; padding:15px 0; width:1px; background:#415968; vertical-align:middle; border-top:20px solid #fff}
 .text-structure-sep div {width:1px; height:44px; background:#70828d}
 .text-structure-descr {display:table-cell; padding:0 17px; width:355px; vertical-align:middle; background:#415968; border-top:20px solid #fff}
@@ -471,6 +474,7 @@ footer div.footer-phone {font:300 15px/18px "Open Sans", sans-serif}
 .window-menu ul li a:hover {background:none}
 
 .window-geo-list {border-top:1px solid #a0acb4; color:#de0738; padding:15px 0 0 0}
+.window-geo-list ul {float:left; margin:0 37px 0 0; padding:0}
 .window-geo-list ul li {margin:0 0 15px 0}
 
 .window-geo-img {line-height:0; text-align:center; margin:45px 0 0 0}
@@ -509,3 +513,9 @@ footer div.footer-phone {font:300 15px/18px "Open Sans", sans-serif}
 .pager a.disabled {cursor:default; opacity:.4; filter:alpha(opacity=40)}
 .pager a.disabled:hover,
 .pager a.active:hover {color:#415968}
+
+.form-file {float:left; position:relative; overflow:hidden; margin-top:30px; padding:0 0 0 37px}
+.form-file:after {content:""; display:block; width:27px; height:25px; background:url(../images/sprite.png) -24px top; position:absolute; left:0; top:0}
+.form-file span {background:url(../images/dots-2.png) repeat-x left bottom; line-height:37px}
+.form-file:hover span {background:none}
+.form-file input {height:200px; position:absolute; top:0; right:0; opacity:0; cursor:pointer; font-size:200px; z-index:2; background:url(../images/blank.gif)}

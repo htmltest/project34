@@ -142,6 +142,10 @@ var timerSliderMain     = null;
             }
         }
 
+        $('.form-file input').change(function() {
+            $(this).parent().find('span').html($(this).val());
+        });
+
         $('.partners-list').each(function() {
             $('.partners-item:nth-child(4n)').addClass('partners-item-4n');
             if ($('.partners-item').length % 4 == 0) {
