@@ -41,10 +41,18 @@ img {border:none}
 .side-business-menu ul li a:hover {color:#de0738}
 
 .info-block {position:relative; margin:18px 0 0 0; border:3px solid #415968; padding:0 18px 18px 18px}
-.info-block-title {font-size:19px; line-height:31px; color:#415968}
-.info-block-title img {vertical-align:middle}
-.info-block-type {position:absolute; right:-6px; top:-6px; background:#415968; color:#fff; border:3px solid #fff; font-size:19px; line-height:31px; height:31px; padding:0 16px}
-.info-block-type a {text-decoration:none; color:#fff}
+.info-block-header {font-size:19px; line-height:31px}
+.info-block-header ul {margin:0; padding:0; list-style:none; width:100%}
+.info-block-header ul:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.info-block-header ul li {float:right; margin:0; padding:0}
+.info-block-header ul li:first-child {float:left}
+.info-block-header ul li a {display:inline-block; vertical-align:top; position:relative; color:#fff; text-decoration:none; background:#415968; margin:-6px -24px 0 0; border:3px solid #fff; padding:0 16px}
+.info-block-header ul li:first-child a {margin:-6px 0 0 -24px}
+.info-block-header img {vertical-align:middle; display:none}
+.info-block-header ul li.active img {display:inline-block}
+.info-block-header ul li.active a {background:none; color:#415968; border:none; padding:0; margin:0; cursor:default}
+.info-block-tab {display:none}
+.info-block-tab.active {display:block}
 .side-video-link {width:259px; position:relative; line-height:0; margin:18px auto 0 auto}
 .side-video-link span {display:block; width:56px; height:56px; position:absolute; left:50%; top:50%; margin:-28px 0 0 -28px; background:url(../images/sprite.png) left -81px}
 
@@ -241,7 +249,7 @@ nav ul li a:hover {color:#de0738}
 .form-multicheck-item {display:inline-block; vertical-align:top; font-size:17px; line-height:34px; letter-spacing:0; width:140px; padding:8px 10px 8px 50px; line-height:19px}
 .form-multicheck-list-2 .form-multicheck-item {display:block; width:auto; overflow:hidden}
 .form-multicheck-item div {float:left; cursor:pointer; position:relative; padding:0 0 0 33px}
-.form-multicheck-item span {position:absolute; left:0; top:3px; display:block; width:17px; height:17px; background:url(../images/sprite.png) -95px -123px; overflow:hidden}
+.form-multicheck-item span {position:absolute; left:0; top:3px; display:block; width:17px; height:16px; background:url(../images/sprite.png) -95px -123px; overflow:hidden}
 .form-multicheck-item span.checked {background-position:-95px -140px}
 .form-multicheck-item span input {position:absolute; left:-99px; top:-99px}
 .form-multicheck-item em {font-style:normal}

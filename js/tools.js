@@ -596,6 +596,19 @@ var timerSliderMain     = null;
             e.preventDefault();
         });
 
+        $('.info-block-header a').click(function(e) {
+            var curLi = $(this).parent();
+            if (!curLi.hasClass('active')) {
+                var curBlock = curLi.parents().filter('.info-block');
+                var curIndex = curBlock.find('.info-block-header li').index(curLi);
+                curBlock.find('.info-block-header li.active').removeClass('active');
+                curLi.addClass('active');
+                curBlock.find('.info-block-tab.active').removeClass('active');
+                curBlock.find('.info-block-tab').eq(curIndex).addClass('active');
+            }
+            e.preventDefault();
+        });
+
     });
 
     $(window).load(function() {
