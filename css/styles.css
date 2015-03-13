@@ -263,12 +263,17 @@ nav ul li a:hover {color:#de0738}
 .form-group-add {width:100%; text-transform:uppercase; padding:30px 0 0 0}
 .form-group-add:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .form-group-add a {float:left; padding:0 0 0 45px; height:31px; line-height:31px; background:url(../images/form-group-add.png) no-repeat; text-decoration:none; color:#de0738}
-.form-radio {width:100%; font:300 14px/18px "Open Sans", sans-serif; margin:4px 0 0 0; color:#000}
+.form-radio {width:100%; font:300 14px/18px "Open Sans", sans-serif; margin:4px 0 0 0; color:#000; text-align:left}
 .form-radio:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .form-radio div {float:left; position:relative; padding:0 0 0 33px; margin:0 0 0 17px; cursor:pointer}
 .form-radio div span {position:absolute; left:0; top:0; display:block; width:18px; height:18px; background:url(../images/sprite.png) -94px -156px; overflow:hidden}
 .form-radio div span.checked {background-position:-94px -174px}
 .form-radio div span input {position:absolute; left:-99px; top:-99px}
+
+.form-auth {width:285px}
+.form-auth .form-radio {margin-top:20px}
+.form-auth .form-radio div {margin-left:0}
+.form-forgot {text-align:right; padding:15px 0 0 0}
 
 .text form.search {position:relative; background:#eceef0; border-top:1px solid #415968; border-left:1px solid #415968; padding:0 52px 0 16px; margin-top:30px}
 .search-input {position:relative}
