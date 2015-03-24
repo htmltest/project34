@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Naftagaz</title>
+
+        <!--[if lt IE 9]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|Open+Sans:300,400,600,700&subset=latin,cyrillic" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="css/chosen.css" />
+
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/grayscale.js"></script>
+        <script src="js/grayscale-functions.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/chosen.jquery.min.js"></script>
+        <script src="js/tools.js"></script>
+
+        <meta name="viewport" content="width=1024" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <!-- container -->
+                <div class="container">
+
+                    <!-- side -->
+                    <div class="side">
+
+                        <!-- side top -->
+                        <div class="side-top">
+                            <div class="logo"><img src="images/logo.png" alt="" width="221" height="28" /></div>
+                            <div class="side-top-text">
+                                <div class="side-top-feedback"><a href="#"><img src="images/side-feedback.png" alt="" width="16" height="10" /></a></div>
+                                <div class="side-top-phone">+7 495 632-26-99</div>
+                            </div>
+                        </div>
+                        <!-- side top END -->
+
+                        <!-- side business -->
+                        <div class="side-business">
+                            <div class="side-business-title">Наш бизнес</div>
+                            <div class="side-business-list">
+                                <a href="#"><span class="side-business-1"></span></a>
+                                <a href="#"><span class="side-business-2"></span></a>
+                                <a href="#"><span class="side-business-3"></span></a>
+                                <a href="#"><span class="side-business-4"></span></a>
+                                <a href="#"><span class="side-business-5"></span></a>
+                                <a href="#"><span class="side-business-6"></span></a>
+                            </div>
+                        </div>
+                        <!-- side business END -->
+
+                        <!-- side ctrl -->
+                        <div class="side-ctrl">
+                            <a href="#" class="side-ctrl-map">
+                                <div class="side-ctrl-map-icon"></div>
+                                <div class="side-ctrl-map-title">Карта сайта</div>
+                            </a>
+                            <a href="#" class="side-ctrl-contacts">
+                                <div class="side-ctrl-contacts-icon"></div>
+                                <div class="side-ctrl-contacts-title">Контакты</div>
+                            </a>
+                            <div class="side-ctrl-search">
+                                <div class="side-ctrl-search-icon"></div>
+                                <div class="side-ctrl-search-title">Поиск</div>
+                                <form action="#" method="post">
+                                    <div class="side-ctrl-search-input"><input type="text" name="search" value="" placeholder="Введите слово или фразу" /></div>
+                                </form>
+                            </div>
+                            <div class="side-ctrl-lang">
+                                <a href="#" class="active">Ru</a>
+                                <a href="#">En</a>
+                            </div>
+                            <div class="side-ctrl-sep"></div>
+                            <div class="side-ctrl-social">
+                                <a href="#"><img src="images/side-social-fb.png" alt="" width="7" height="13" /></a>
+                                <a href="#"><img src="images/side-social-tw.png" alt="" width="15" height="13" /></a>
+                            </div>
+                        </div>
+                        <!-- side ctrl END -->
+
+                        <div class="side-banner">
+                            <a href="#"><img src="files/side-banner-5.jpg" alt="" width="300" height="220" /></a>
+                        </div>
+
+                    </div>
+                    <!-- side END -->
+
+                    <!-- content -->
+                    <div class="content">
+
+                        <!-- content menu -->
+                        <div class="content-menu">
+                            <div class="content-menu-top">
+                                <ul>
+                                    <li><a href="#">Компания</a></li>
+                                    <li><a href="#">Пресс-центр</a></li>
+                                    <li><a href="#">Социальная политика</a></li>
+                                    <li><a href="#">Карьера</a></li>
+                                    <li class="active"><a href="#">Закупки</a></li>
+                                </ul>
+                            </div>
+                            <div class="content-menu-bottom">
+                                <ul>
+                                    <li><a href="#">Тендеры</a></li>
+                                    <li class="content-menu-bottom-sep"></li>
+                                    <li class="active"><a href="#">Личный кабинет</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- content menu END -->
+
+                        <!-- text -->
+                        <div class="text">
+                            <h1>Личный кабинет</h1>
+                            <form action="#" method="post">
+                                <div class="form-edit">
+                                    <div class="form-edit-name">Логин</div>
+                                    <div class="form-edit-value"><a href="#">ivanov</a></div>
+                                    <div class="form-edit-field">
+                                        <div class="form-label">минимум 3 символа</div>
+                                        <div class="form-input"><span>Укажите</span><input type="text" name="login" value="ivanov" class="required" /></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-edit">
+                                    <div class="form-edit-name">Пароль</div>
+                                    <div class="form-edit-value"><a href="#">изменить</a></div>
+                                    <div class="form-edit-field">
+                                        <div class="form-label">минимум 6 символов</div>
+                                        <div class="form-input"><span>Укажите</span><input type="password" name="password" value="" class="required" /></div>
+
+                                        <div class="form-label">подтверждение пароля</div>
+                                        <div class="form-input"><span>Укажите</span><input type="password" name="repassword" value="" class="required" /></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-edit">
+                                    <div class="form-edit-name">Адрес электронной почты</div>
+                                    <div class="form-edit-value"><a href="#">ivanov@mail.ru</a></div>
+                                    <div class="form-edit-field">
+                                        <div class="form-input"><span>Укажите</span><input type="text" name="email" value="ivanov@mail.ru" class="required email" /></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-edit">
+                                    <div class="form-edit-name">Фамилия Имя Отчество</div>
+                                    <div class="form-edit-value"><a href="#">Иванов Иван Иванович</a></div>
+                                    <div class="form-edit-field">
+                                        <div class="form-input"><span>Укажите</span><input type="text" name="name" value="Иванов Иван Иванович" class="required" /></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-edit">
+                                    <div class="form-edit-name">Телефон</div>
+                                    <div class="form-edit-value"><a href="#">+7 999 999 99 99</a></div>
+                                    <div class="form-edit-field">
+                                        <div class="form-input"><span>Укажите</span><input type="text" name="phone" value="+7 999 999 99 99" class="required" /></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-edit">
+                                    <div class="form-edit-name">Номенклатура</div>
+                                    <div class="form-edit-value"><a href="#">изменить</a></div>
+                                    <div class="form-edit-field">
+                                        <div class="form-multicheck">
+                                            <div class="form-multicheck-arrow"></div>
+                                            <div class="form-multicheck-placeholder">Выберите из списка</div>
+                                            <div class="form-multicheck-value"><div></div></div>
+                                            <div class="form-multicheck-list">
+                                                <div class="form-multicheck-list-inner">
+                                                    <div class="form-multicheck-item"><div><span><input type="checkbox" name="metalAll" /></span><em><strong>Металлы</strong></em></div></div>
+                                                    <br />
+                                                    <div class="form-multicheck-item"><div><span><input type="checkbox" name="metal1" /></span><em>Алюминий</em></div></div>
+                                                    <div class="form-multicheck-item"><div><span><input type="checkbox" name="metal2" checked="checked" /></span><em>Медь</em></div></div>
+                                                    <div class="form-multicheck-item"><div><span><input type="checkbox" name="metal3" checked="checked" /></span><em>Сталь</em></div></div>
+
+                                                    <br />
+                                                    <div class="form-multicheck-item"><div><span><input type="checkbox" name="transportAll" /></span><em><strong>Транспорт</strong></em></div></div>
+                                                    <br />
+                                                    <div class="form-multicheck-item"><div><span><input type="checkbox" name="transport1" /></span><em>Легковой</em></div></div>
+                                                    <div class="form-multicheck-item"><div><span><input type="checkbox" name="transport2" /></span><em>Грузовой</em></div></div>
+                                                    <div class="form-multicheck-item"><div><span><input type="checkbox" name="transport3" /></span><em>Специальный</em></div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-checkbox"><div><span><input type="checkbox" name="subscribe" checked="checked" /></span>Подписка на рассылку тендеров</div></div>
+
+                                <div class="form-submit">
+                                    <input type="submit" value="Сохранить" />
+                                </div>
+                            </form>
+                        </div>
+                        <!-- text END -->
+
+                    </div>
+                    <!-- content END -->
+
+                </div>
+                <!-- container END -->
+
+                <!-- partners -->
+                <div class="partners">
+                    <ul>
+                        <li><span><img src="files/partners/01.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/02.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/03.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/16.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/17.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/18.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/05.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/06.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/07.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/08.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/09.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/10.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/11.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/12.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/13.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/14.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/15.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/20.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/23.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/24.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/25.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/26.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/27.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/28.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/29.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/30.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/32.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/34.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/35.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/36.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/37.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/38.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/39.jpg" alt="" width="89" height="89" /></span></li>
+                        <li><span><img src="files/partners/40.jpg" alt="" width="89" height="89" /></span></li>
+                    </ul>
+                </div>
+                <!-- partners END -->
+
+                <!-- bottom -->
+                <div class="bottom">
+                    <div class="bottom-item">
+                        <div>Наш бизнес</div>
+                        <ul>
+                            <li><a href="#">Бурение скважин</a></li>
+                            <li><a href="#">Цементирование скважин</a></li>
+                            <li><a href="#">Промышленное строительство</a></li>
+                            <li><a href="#">Ремонт скважин</a></li>
+                            <li><a href="#">Транспорт и логистика</a></li>
+                            <li><a href="#">Машиностроение</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="bottom-item">
+                        <div>Компания</div>
+                        <ul>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Стратегия</a></li>
+                            <li><a href="#">Дочерние и<br />зависимые компании</a></li>
+                            <li><a href="#">Партнеры</a></li>
+                            <li><a href="#">Раскрытие информации</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="bottom-item">
+                        <div>Пресс-центр</div>
+                        <ul>
+                            <li><a href="#">Новости компании</a></li>
+                            <li><a href="#">СМИ о компании</a></li>
+                            <li><a href="#">Архив публикаций</a></li>
+                            <li><a href="#">Отчеты и презентации</a></li>
+                            <li><a href="#">Фотоматериалы</a></li>
+                            <li><a href="#">Видеоматериалы</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="bottom-item">
+                        <div>Социальная<br />политика</div>
+                        <ul>
+                            <li><a href="#">Охрана труда</a></li>
+                            <li><a href="#">Экология</a></li>
+                            <li><a href="#">Промышленная<br />безопасность</a></li>
+                            <li><a href="#">Благотворительность</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="bottom-item">
+                        <div>Карьера</div>
+                        <ul>
+                            <li><a href="#">Вакансии управляющей<br />компании</a></li>
+                            <li><a href="#">Вакансии дочерних и<br />зависимых компаний</a></li>
+                            <li><a href="#">Анкета кандидата на работу</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="bottom-item">
+                        <div>Закупки</div>
+                        <ul>
+                            <li><a href="#">Тендеры</a></li>
+                            <li><a href="#">Личный кабинет</a></li>
+                            <li><a href="#">Подписка<br />на рассылку</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- bottom END -->
+
+                <footer>
+                    <div class="footer-logo"><img src="images/footer-logo.png" alt="" width="55" height="28" /></div>
+                    <div class="footer-copyrights">© ОАО «Нафтагаз», 2014</div>
+                    <div class="footer-email"><a href="#"><img src="images/footer-email.png" alt="" width="16" height="10" /></a></div>
+                    <div class="footer-phone">+7 495 632-26-99</div>
+                    <div class="footer-link"><a href="#">Правила использования</a></div>
+                    <div class="footer-link"><a href="#">Конфиденциальность</a></div>
+                </footer>
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+    </body>
+</html>

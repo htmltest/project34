@@ -249,6 +249,13 @@ var timerSliderMain     = null;
             $(this).find('input').prop('checked', true).trigger('change');
         });
 
+        $('.form-checkbox input:checked').parent().addClass('checked');
+
+        $('.form-checkbox div').click(function() {
+            $(this).find('span').toggleClass('checked');
+            $(this).find('input').prop('checked', $(this).find('span').hasClass('checked')).trigger('change');
+        });
+
         $('.form-group-add a').click(function(e) {
             var curGroup = $(this).parents().filter('.form-group');
             curGroup.find('.form-group-list').append('<div class="form-group-new">' + curGroup.find('.form-group-template').html() + '</div>');
@@ -606,6 +613,11 @@ var timerSliderMain     = null;
                 curBlock.find('.info-block-tab.active').removeClass('active');
                 curBlock.find('.info-block-tab').eq(curIndex).addClass('active');
             }
+            e.preventDefault();
+        });
+
+        $('.form-edit-value a').click(function(e) {
+            $(this).parents().filter('.form-edit').addClass('form-edit-open');
             e.preventDefault();
         });
 

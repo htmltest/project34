@@ -269,6 +269,22 @@ nav ul li a:hover {color:#de0738}
 .form-radio div span {position:absolute; left:0; top:0; display:block; width:18px; height:18px; background:url(../images/sprite.png) -94px -156px; overflow:hidden}
 .form-radio div span.checked {background-position:-94px -174px}
 .form-radio div span input {position:absolute; left:-99px; top:-99px}
+.form-checkbox {width:100%; font:300 14px/18px "Open Sans", sans-serif; margin:4px 0 0 0; color:#000; text-align:left}
+.form-checkbox:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.form-checkbox div {float:left; position:relative; padding:0 0 0 33px; cursor:pointer}
+.form-checkbox div span {position:absolute; left:0; top:0; display:block; width:17px; height:16px; background:url(../images/sprite.png) -95px -123px; overflow:hidden}
+.form-checkbox div span.checked {background-position:-95px -140px}
+.form-checkbox div span input {position:absolute; left:-99px; top:-99px}
+.form-edit {position:relative; background:url(../images/form-edit.png) no-repeat left 14px; padding:0 0 19px 33px}
+.form-edit-name {font-weight:bold; font-family:"Open Sans", sans-serif}
+.form-edit-value {font-family:"Open Sans", sans-serif; font-weight:300}
+.form-edit-open .form-edit-value {display:none}
+.form-edit-value a {text-decoration:none; color:#415968; background:url(../images/dots-2.png) repeat-x left bottom}
+.form-edit-value a:hover {background:none}
+.form-edit-field {position:absolute; left:-9999px; top:-9999px}
+.form-edit-open .form-edit-field {position:relative; left:auto; top:auto}
+.form-edit-field .form-input:first-child,
+.form-edit-field .form-multicheck:first-child {margin-top:8px}
 
 .form-auth {width:285px}
 .form-auth .form-radio {margin-top:20px}
