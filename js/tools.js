@@ -632,6 +632,14 @@ var timerSliderMain     = null;
                 }
             });
             $('.main-middle .info-block').css({'min-height': curHeight});
+
+            var leftHeight = $('.side-business-menu').outerHeight();
+            var rightHeight = $('nav').outerHeight() + $('.main-middle').outerHeight();
+            if (leftHeight > rightHeight) {
+                $('.main-middle').css({'padding-bottom': leftHeight - rightHeight});
+            } else {
+                $('.side-business-menu').css({'padding-bottom': rightHeight - leftHeight + 56});
+            }
         });
     });
 
